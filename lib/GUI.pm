@@ -3096,7 +3096,7 @@ sub _fill_radiobox {
    my($previous_key, $value);
 
    $previous_key = undef;
-   for $value (keys %values) {
+   for $value (sort keys %values) {
       my $display_name = $values{$value};
       my $key = Gtk2::RadioButton->new($previous_key, $display_name);
       $key->signal_connect('toggled' =>
